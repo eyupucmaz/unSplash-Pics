@@ -38,14 +38,14 @@ class App extends React.Component<any, AppStates> {
 
   render() {
     return (
-      <>
+      <div className="overflow-x-hidden">
         {/* NAVBAR */}
-        <div className="flex justify-center sm:justify-between flex-wrap bg-white sticky top-0 left-0 z-10">
+        <div className="flex justify-center sm:justify-between flex-wrap bg-white sticky top-0 left-0 z-10 ">
           <SearchBar onSubmit={this.onSearchSubmit} />
           <NavMenu />
         </div>
         {/* IMAGE LISTING */}
-        <div className="w-screen h-100 flex flex-col justify-center items-center pt-9">
+        <div className="flex flex-col justify-center items-center m-5">
           {this.state.loading ? (
             <Loading />
           ) : (
@@ -59,7 +59,7 @@ class App extends React.Component<any, AppStates> {
             </>
           )}
         </div>
-      </>
+      </div>
     );
   }
 }

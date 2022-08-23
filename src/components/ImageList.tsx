@@ -16,23 +16,15 @@ export default function ImageList(props: Props) {
   }, [props.images]);
 
   return (
-    <ul
-      className={
-        'w-screen p-4 flex flex-wrap items-center justify-center gap-3'
-      }
-    >
+    <ul className={'w-full flex flex-wrap items-center justify-center gap-3'}>
       {images?.map((image: any) => (
-        <div
-          className="basis-80 h-80 cursor-pointer relative transition-all grow bg-slate-200 border-4 shadow-md rounded hover:scale-105 "
+        <img
+          src={image.urls.regular}
           key={image.id}
-        >
-          <img
-            src={image.urls.regular}
-            loading={'lazy'}
-            className="object-cover w-full h-full align-middle rounded"
-            alt={image.alt_description}
-          />
-        </div>
+          loading={'lazy'}
+          className="object-cover w-full  rounded basis-80 h-80 cursor-pointer relative transition-all grow  border-4 shadow-md  hover:scale-105"
+          alt={image.alt_description}
+        />
       ))}
     </ul>
   );
