@@ -60,28 +60,18 @@ export default class SearchBar extends Component<
 
   render() {
     return (
-      <div
-        className="m-6 sm:p-0 py-2 w-full sm:max-w-xl   bg-slate-100 rounded-xl shadow-lg
-       flex flex-col items-center space-x-4"
-      >
-        <h1
-          className="block mt-3 text-transparent max-w-[40ch] leading-relaxed
-        text-3xl sm:text-4xl font-bold bg-gradient-to-r from-green-500
-        via-blue-500 to-purple-500 bg-clip-text"
-        >
-          UnSplash Search
-        </h1>
+      <div className="w-full sm:w-1/2">
         <form
           onSubmit={this.onFormSubmit}
-          className="w-full py-6 px-3"
+          className="w-full p-4 sm:py-6 sm:px-3"
           style={{ margin: '0' }}
         >
           <input
             type={'text'}
             value={this.state.inputText}
             onChange={this.onInputChange}
-            className="w-full pl-1 py-1 font-semibold text-purple-800 text-xl border"
-            placeholder="what looking for..."
+            className="w-full pl-3 p-1 bg-slate-200 hover:border-1 hover:border-gray-400  focus:outline-none rounded-full text-purple-800 text-md border"
+            placeholder="Search free high-resolution photos"
           />
         </form>
       </div>
