@@ -70,7 +70,7 @@ export default class SearchBar extends Component<
             type={'text'}
             value={this.state.inputText}
             onChange={this.onInputChange}
-            className="w-full pl-3 p-1 bg-slate-200 hover:border-1 hover:border-gray-400  focus:outline-none rounded-full text-purple-800 text-md border"
+            className="w-full pl-3 p-2 bg-gray-100 hover:border-1 hover:border-gray-400  focus:outline-none rounded-full text-purple-800 text-md border"
             placeholder="Search free high-resolution photos"
           />
         </form>
